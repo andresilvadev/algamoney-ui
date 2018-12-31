@@ -1,0 +1,31 @@
+<div class="container body-login">
+
+  <div class="information">
+    <h1>ALS - Sistemas Comerciais</h1>
+  </div>
+
+  <div class="box-access">
+    <form autocomplete="off" #f="ngForm">
+      <div class="ui-g ui-fluid">
+
+        <div class="ui-g-12">
+          <h1>Acesso ao sistema</h1>
+        </div>
+
+        <div class="ui-g-12">
+          <input class="input-login" pInputText type="email" name="usuario" placeholder="E-mail" ngModel required #usuario>
+        </div>
+
+        <div class="ui-g-12">
+          <input class="input-login" pInputText type="password" name="senha" placeholder="Senha" ngModel required #senha>
+        </div>
+
+        <div class="ui-g-12">
+          <button pButton type="submit" label="Login" [disabled]="!f.valid" class="btn-main" (click)="login(usuario.value, senha.value); senha.value = '';"></button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+</div>
